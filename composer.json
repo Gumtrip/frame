@@ -1,15 +1,16 @@
 {
-    "name": "vagrant/frame",
-    "authors": [
-        {
-            "name": "gumtrip",
-            "email": "gumtrip@126.com"
-        }
-    ],
-    "require": {},
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/"
-        }
+  "name": "vagrant/frame",
+  "authors": [
+    {
+      "name": "gumtrip",
+      "email": "gumtrip@126.com"
     }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "app\\": "app/",
+      "sf\\": "src/"
+    }
+  }
 }
