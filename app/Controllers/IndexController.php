@@ -14,14 +14,18 @@ class IndexController extends Controller
             'second' => 'simple-framework',
             'user' => $user
         ];
-        $this->render('index',compact(['name']));
+        $str = "{{ $name }}";
+
+        $this->render('index',compact(['name','str']));
     }
 
     public function cacheIndex(){
-        $cache = Sf::createObject('cache');
-        $cache->set('test1', '我就是测试一下缓存组件');
+        $cache = Sf::createObject('redis');
+        $cache->set('test', '我就是测试一下缓存组件');
         $result = $cache->get('test');
 //        $cache->flush();
+
+
         echo $result;
     }
 }

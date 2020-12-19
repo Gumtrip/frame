@@ -3,14 +3,12 @@
 
 namespace sf\web;
 
+use sf\view\Compiler;
 
 class Controller
 {
-    public function render($view,$params = []){
-
-
-        extract($params);
-
-        return require '../resources/views/' . $view . '.php';
+    public function render($view, $params = [])
+    {
+        (new Compiler())->compile($view, $params);
     }
 }

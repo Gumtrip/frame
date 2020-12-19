@@ -9,7 +9,8 @@
 </head>
 <body>
 <div>
-    hello,<?php echo $name ?>
+    hello,{{$name}}
+    hello,{{$str}}
 </div>
 </body>
 </html>

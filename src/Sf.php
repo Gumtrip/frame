@@ -16,6 +16,10 @@ class Sf
         foreach ($config as $key => $value) {
             $instance->$key = $value;
         }
+        if(method_exists($instance,'init')){
+            $instance->init();
+        }
+        
         return $instance;
     }
 }
